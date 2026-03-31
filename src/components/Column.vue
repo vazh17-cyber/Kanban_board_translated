@@ -2,14 +2,14 @@
   <div class="w-56 shrink-0">
     <div class="mb-3 flex justify-between">
       <h3 :class="['font-medium', color]">{{ title }}</h3>
-      <span class="text-sm text-neutral-400">{{ cards.length }}</span>
+      <span class="text-sm text-neutral-400 dark:text-neutral-500 transition-colors duration-300">{{ cards.length }}</span>
     </div>
 
     <div
       @drop="handleDrop"
       @dragover.prevent="active = true"
       @dragleave="active = false"
-      :class="['h-full', active && 'bg-neutral-800/50']"
+      :class="['h-full transition-colors duration-300', active && 'bg-neutral-200/50 dark:bg-neutral-800/50']"
     >
       <Card v-for="c in cards" :key="c.id" :card="c" />
 

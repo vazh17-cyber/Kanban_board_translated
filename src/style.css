@@ -1,11 +1,31 @@
 @import "tailwindcss";
 
+/* Enable class-based dark mode */
+@variant dark (.dark &);
+
 /* Design tokens (replaces theme.extend) */
 @theme {
   --color-weather-primary: #00668A;
   --color-weather-secondary: #004E71;
 
+  --color-bg-primary: var(--bg-primary);
+  --color-text-primary: var(--text-primary);
+  --color-bg-secondary: var(--bg-secondary);
+
   --container-padding: 1rem;
+}
+
+/* Theme variables */
+:root {
+  --bg-primary: #ffffff;
+  --text-primary: #000000;
+  --bg-secondary: #f8f9fa;
+}
+
+.dark {
+  --bg-primary: #1a1a1a;
+  --text-primary: #ffffff;
+  --bg-secondary: #2d2d2d;
 }
 
 /* Optional: container behavior */

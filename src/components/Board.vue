@@ -1,5 +1,5 @@
 <template>
-  <div class="h-screen w-full bg-neutral-900 text-neutral-50">
+  <div class="h-screen w-full bg-bg-primary text-text-primary transition-colors duration-300">
     <div class="flex justify-center h-full w-full gap-3 overflow-scroll p-12">
       <Column v-for="col in columns" :key="col.id" v-bind="col" />
       <BurnBarrel />

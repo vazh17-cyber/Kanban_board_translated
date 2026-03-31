@@ -4,9 +4,9 @@
     @dragover.prevent="active = true"
     @dragleave="active = false"
     :class="[
-      'mt-10 grid h-56 w-56 place-content-center rounded border text-3xl',
+      'mt-10 grid h-56 w-56 place-content-center rounded border text-3xl transition-colors duration-300',
       active ? 'border-red-800 bg-red-800/20 text-red-500'
-             : 'border-neutral-500 bg-neutral-500/20'
+             : 'border-neutral-500 dark:border-neutral-600 bg-neutral-500/20 dark:bg-neutral-600/20'
     ]"
   >
     🗑️

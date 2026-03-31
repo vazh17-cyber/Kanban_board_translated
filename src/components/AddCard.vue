@@ -1,10 +1,10 @@
 <template>
     <div>
         <form v-if="adding" @submit.prevent="submit">
-            <textarea v-model="text" class="w-full bg-neutral-800 p-2" />
+            <textarea v-model="text" class="w-full bg-bg-secondary p-2 transition-colors duration-300" />
             <button v-if="text.trim().length > 0" class="cursor-pointer relative overflow-hidden mt-2 px-2 py-2 font-semibold text-white rounded-xl
-         bg-gradient-to-r from-green-300 via-green-450 to-green-600
-         bg-[length:200%_100%] bg-left
+         bg-linear-to-r from-green-300 via-green-400 to-green-600
+         bg-size-[200%_100%] bg-left
          transition-all duration-500 ease-out
          hover:bg-right
          shadow-lg hover:shadow-green-500/30
@@ -12,11 +12,11 @@
                 Add
             </button>
             <button v-if="text.trim().length == 0" @click.prevent="cancel" class="cursor-pointer relative overflow-hidden mt-2 px-2 py-2 font-semibold text-white rounded-xl
-         bg-gradient-to-r from-red-300 via-red-450 to-red-600
-         bg-[length:200%_100%] bg-left
+         bg-linear-to-r from-red-300 via-red-400 to-red-600
+         bg-size-[200%_100%] bg-left
          transition-all duration-500 ease-out
          hover:bg-right
-         shadow-lg hover:shadow-green-500/30
+         shadow-lg hover:shadow-red-500/30
          active:scale-95">
                 Cancel
             </button>
@@ -24,11 +24,11 @@
 
         <button v-else @click="adding = true"
         class="cursor-pointer relative overflow-hidden px-2 py-2 font-semibold text-white rounded-xl
-         bg-gradient-to-r from-blue-300 via-blue-450 to-blue-600
-         bg-[length:200%_100%] bg-left
+         bg-linear-to-r from-blue-300 via-blue-400 to-blue-600
+         bg-size-[200%_100%] bg-left
          transition-all duration-500 ease-out
          hover:bg-right
-         shadow-lg hover:shadow-green-500/30
+         shadow-lg hover:shadow-blue-500/30
          active:scale-95"
         >
         Add card
